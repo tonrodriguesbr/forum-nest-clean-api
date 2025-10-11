@@ -4,7 +4,6 @@ import { PrismaService } from "../prisma.service";
 import { AttachmentsRepository } from "@/domain/forum/application/repositories/attachments-repository";
 import { Attachment } from "@/domain/forum/enterprise/entities/attachment";
 import { PrismaAttachmentMapper } from "../mappers/prisma-attachments-mapper";
-import { QuestionAttachmentsRepository } from "@/domain/forum/application/repositories/question-attachments-repository";
 
 @Injectable()
 export class PrismaAttachmentsRepository implements AttachmentsRepository {
