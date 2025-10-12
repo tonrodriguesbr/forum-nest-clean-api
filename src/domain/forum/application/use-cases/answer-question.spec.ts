@@ -37,4 +37,20 @@ describe("Create Answer", () => {
       ]
     );
   });
+
+  it("should be able to persist attachments when creating a new answer", async () => {
+    const result = await sut.execute({
+      authorId: "1",
+      questionId: "1",
+      content: "Content Answer",
+      attachmentsIds: ["1", "2"],
+    });
+
+    expect(result.isRight()).toBeTruthy();
+    expect(inMemoryAnswerAttachmentsRepository.items).toHaveLength(2);
+    expect(inMemoryAnswerAttachmentsRepository.items).toEqual([
+      expect.objectContaining({ attachmentId: new UniqueEntityId("1") }),
+      expect.objectContaining({ attachmentId: new UniqueEntityId("2") }),
+    ]);
+  });
 });

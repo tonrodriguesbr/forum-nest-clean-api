@@ -14,6 +14,7 @@ import { z } from "zod";
 
 const editAnswerBodySchema = z.object({
   content: z.string(),
+  attachments: z.array(z.string().uuid()),
 });
 
 type EditAnswerBodySchema = z.infer<typeof editAnswerBodySchema>;
@@ -31,14 +32,14 @@ export class EditAnswerController {
     @Param("id") answerId: string,
     @CurrentUser() user: UserPayload
   ) {
-    const { content } = editAnswerBodySchema.parse(body);
+    const { content, attachments } = editAnswerBodySchema.parse(body);
 
     const authorId = user.sub;
 
     const result = await this.editAnswer.execute({
       content,
       authorId,
-      attachmentsIds: [],
+      attachmentsIds: attachments,
       answerId,
     });
 
