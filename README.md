@@ -356,7 +356,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 👨‍💻 Autor
 
-Desenvolvido por [Wellington Rodrigues](https://github.com/wellingtonrodriguesbr)
+Desenvolvido por [Wellington Rodrigues](https://linkedin/in/wellingtonrodriguesbr)
 
 ---
 
