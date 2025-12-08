@@ -8,7 +8,6 @@ import { QuestionFactory } from "test/factories/make-question";
 import { StudentFactory } from "test/factories/make-student";
 import { DatabaseModule } from "@/infra/database/database.module";
 import { QuestionCommentFactory } from "test/factories/make-question-comment";
-import { a } from "vitest/dist/suite-CRLAhsm0";
 
 describe("Fetch question comments (E2E)", () => {
   let app: INestApplication;

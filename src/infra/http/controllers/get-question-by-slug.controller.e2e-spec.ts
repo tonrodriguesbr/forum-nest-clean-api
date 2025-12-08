@@ -10,7 +10,6 @@ import { QuestionFactory } from "test/factories/make-question";
 import { Slug } from "@/domain/forum/enterprise/entities/value-objects/slug";
 import { AttachmentFactory } from "test/factories/make-attachment";
 import { QuestionAttachmentFactory } from "test/factories/make-question-attachment";
-import { a } from "vitest/dist/suite-CRLAhsm0";
 
 describe("Get question by slug (E2E)", () => {
   let app: INestApplication;
